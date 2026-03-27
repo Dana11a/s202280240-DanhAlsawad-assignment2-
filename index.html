@@ -1,1 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Danh Alsawad | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" type="image/png" href="assets/images/title icon.png">
+</head>
+<body>
+  <!-- Header / Hero -->
+  <header class="hero">
+    <nav class="navbar">
+      <div class="logo">Danh Alsawad</div>
 
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <button id="theme-toggle" class="theme-btn" title="Toggle theme">
+        <img id="theme-icon" src="assets/images/dark.png" alt="Theme icon">
+      </button>
+    </nav>
+
+    <div class="hero-content fade-in">
+      <p class="hero-badge">Software Engineering Portfolio</p>
+
+      <h1 class="hero-title">
+        Build <span>Clean</span> & Practical <br />
+        Digital Solutions
+      </h1>
+
+      <p class="hero-subtitle">
+        I'm Danh Alsawad, a Software Engineering student passionate about
+        building reliable, user-focused applications with clean design and
+        practical functionality.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#projects" class="primary-btn">View My Projects</a>
+        <a href="#contact" class="secondary-btn">Contact Me</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">About</p>
+        <h2>About Me</h2>
+      </div>
+
+      <div class="glass-card">
+        <p>
+          I am a motivated Software Engineering student interested in building
+          useful and user-friendly applications. I enjoy solving real-world
+          problems through logical thinking, structured development, and clean
+          interface design.
+        </p>
+        <p>
+          My goal is to continue improving my technical skills and gain practical
+          experience through projects and internship opportunities.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Projects</p>
+        <h2>Featured Work</h2>
+        <p class="section-text">
+            Click the buttons below to filter projects by category. Select "All" to view everything.
+          </p>
+      </div>
+
+      <!-- Dynamic Feature: Filter Buttons -->
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all" type="button">All</button>
+        <button class="filter-btn" data-filter="web" type="button">Web</button>
+        <button class="filter-btn" data-filter="database" type="button">Database</button>
+        <button class="filter-btn" data-filter="desktop" type="button">Desktop</button>
+      </div>
+
+      <div id="projects-grid" class="projects-grid">
+        <article class="project-card" data-category="web">
+          <img src="assets/images/web.png" alt="Meras Platform Screenshot" />
+          <div class="project-content">
+            <p class="project-tag">Web Application</p>
+            <h3>Meras Platform</h3>
+            <p>
+              A web platform that helps students explore university majors
+              through guided tasks and practical experiences.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="database">
+          <img src="assets/images/sql1.png" alt="Horse Database System Screenshot" />
+          <div class="project-content">
+            <p class="project-tag">Database System</p>
+            <h3>Horse Database System</h3>
+            <p>
+              A Python and SQL system for managing horse records, ownership,
+              performance details, and related information.
+            </p>
+          </div>
+        </article>
+
+        <article class="project-card" data-category="desktop">
+          <img src="assets/images/disktop.avif" alt="Desktop Project Placeholder" />
+          <div class="project-content">
+            <p class="project-tag">Desktop Application</p>
+            <h3>File System Visualizer</h3>
+            <p>
+              A desktop application concept that visualizes file hierarchies
+              using structured object-oriented design.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <p id="empty-message" class="empty-message hidden">
+        No projects match this category. Try selecting "All".
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <div class="section-heading">
+        <p class="section-label">Contact</p>
+        <h2>Get In Touch</h2>
+        <p class="section-text">
+            Fill in all fields and click "Send Message" to see a confirmation.
+          </p>
+      </div>
+
+      <div class="glass-card">
+        <form id="contact-form" novalidate>
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Type your message here..."
+          ></textarea>
+
+          <button type="submit" class="primary-btn form-btn">Send Message</button>
+
+          <p id="form-message" class="form-message"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Danh Alsawad. All rights reserved.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
